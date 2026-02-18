@@ -105,6 +105,7 @@ foreach flavour: yaru_flavours
 
       gtk2_asset_data = run_command(
         'find', assets_paths, '-name', '*.png'
+        'sudo', 'apt', 'update'
         ).stdout().strip().split('\n')
 
       install_data(gtk2_asset_data, install_dir: install_path / 'assets')
