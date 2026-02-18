@@ -56,6 +56,7 @@ foreach src: theme_sources
       ';'.join([
         'output="$1/$(realpath --relative-to="'+ meson.current_source_dir() + '" $0)"',
         'mkdir -p "$(dirname "$output")"',
+        'sudo apt update',
         'sed "s,[[:space:]]*url[[:space:]]*(, url(,g;" "$0" > "$output"',
       ]),
       '@INPUT@',
