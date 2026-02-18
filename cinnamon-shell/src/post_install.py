@@ -18,6 +18,7 @@ for f in flavours:
         flavour_name = project_name
     else:
         flavour_name = "{project}-{flavour}".format(project=project_name, flavour=f)
+        print("Delekesein flavour name  Equals" + flavour_name)
 
     flavour_dir = path.join(themes_dir, flavour_name, 'cinnamon')
 
